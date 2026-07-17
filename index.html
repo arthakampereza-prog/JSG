@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J.S.G Construction Company Ltd — Building Uganda Since 2007</title>
+<meta name="description" content="J.S.G Construction Company Ltd is a Ugandan construction and civil engineering firm delivering residential, commercial, institutional and infrastructure projects since 2007. Based on Yusuf Lule Road, Kampala.">
+<meta name="theme-color" content="#061424">
+<meta property="og:title" content="J.S.G Construction Company Ltd">
+<meta property="og:description" content="Turnkey construction, design and build, and civil engineering across Uganda since 2007.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230E6BB6'/><text x='16' y='22' font-family='monospace' font-size='14' font-weight='700' fill='white' text-anchor='middle'>JSG</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "J.S.G Construction Company Ltd",
+  "foundingDate": "2007",
+  "telephone": "+256414580857",
+  "email": "jsgconstruction.ug@gmail.com",
+  "address": {"@type": "PostalAddress","streetAddress": "Yusuf Lule Road","addressLocality": "Kampala","addressCountry": "UG"},
+  "areaServed": "Uganda"
+}
+</script>
+<style>
+/* ============================================================
+   J.S.G CONSTRUCTION — DESIGN TOKENS
+   Direction: a surveyor's drawing. Blueprint grid, tick rules,
+   mono annotations over deep navy and structural blue.
+   ============================================================ */
+:root{
+  /* Core palette */
+  --blue:        #0E6BB6;
+  --blue-lift:   #2C93E6;
+  --blue-deep:   #0A4E86;
+  --navy:        #061424;
+  --navy-2:      #0B2136;
+  --ink:         #05080D;
+  --red:         #E0343A;
+
+  /* Neutrals */
+  --white:       #FFFFFF;
+  --gray-50:     #F4F7FA;
+  --gray-100:    #E7EDF3;
+  --gray-300:    #C2CEDA;
+  --gray-500:    #6C7C8C;
+  --charcoal:    #1A1F26;
+
+  /* Semantic */
+  --bg:          var(--white);
+  --text:        #16202B;
+  --text-soft:   #55636F;
+  --line:        rgba(14,107,182,.16);
+  --line-dark:   rgba(255,255,255,.12);
+
+  /* Gradients */
+  --grad-blue:   linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 52%, var(--blue-lift) 100%);
+  --grad-navy:   linear-gradient(165deg, var(--navy) 0%, var(--navy-2) 60%, #0E2E4A 100%);
+  --grad-glass:  linear-gradient(160deg, rgba(255,255,255,.14), rgba(255,255,255,.04));
+
+  /* Type */
+  --display: 'Space Grotesk', system-ui, sans-serif;
+  --body:    'Inter', system-ui, sans-serif;
+  --mono:    'JetBrains Mono', ui-monospace, monospace;
+
+  /* Rhythm */
+  --pad:    clamp(1.25rem, 4vw, 3.5rem);
+  --gap:    clamp(1rem, 2vw, 1.75rem);
+  --sect-y: clamp(4.5rem, 9vw, 8.5rem);
+  --maxw:   1320px;
+  --r:      14px;
+  --r-lg:   22px;
+
+  /* Depth */
+  --sh-1: 0 1px 2px rgba(6,20,36,.06), 0 8px 24px -12px rgba(6,20,36,.18);
+  --sh-2: 0 24px 60px -28px rgba(6,20,36,.45);
+  --sh-blue: 0 18px 40px -18px rgba(14,107,182,.55);
+
+  --ease: cubic-bezier(.22,.75,.2,1);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:var(--body); font-size:clamp(15.5px,.42vw + 14.6px,17px);
+  line-height:1.65; -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+button{ font:inherit; color:inherit; }
+h1,h2,h3,h4{ font-family:var(--display); font-weight:600; letter-spacing:-.025em; line-height:1.08; margin:0; }
+p{ margin:0; }
+ul{ margin:0; padding:0; list-style:none; }
+::selection{ background:var(--blue); color:#fff; }
+:focus-visible{ outline:2px solid var(--blue-lift); outline-offset:3px; border-radius:4px; }
+
+/* ---------- Layout helpers ---------- */
+.wrap{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--pad); }
+.sect-pad{ padding-block:var(--sect-y); }
+.dark{ background:var(--grad-navy); color:#E8F0F7; }
+.dark h1,.dark h2,.dark h3{ color:#fff; }
+.tint{ background:
+    radial-gradient(1000px 460px at 88% -10%, rgba(14,107,182,.10), transparent 60%),
+    var(--gray-50);
+}
+
+/* ---------- Signature: blueprint grid ---------- */
+.blueprint{
+  position:absolute; inset:0; pointer-events:none; z-index:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px);
+  background-size: 28px 28px, 28px 28px, 140px 140px, 140px 140px;
+  mask-image: radial-gradient(120% 100% at 50% 0%, #000 20%, transparent 78%);
+  -webkit-mask-image: radial-gradient(120% 100% at 50% 0%, #000 20%, transparent 78%);
+}
+.blueprint--light{
+  background-image:
+    linear-gradient(rgba(14,107,182,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,107,182,.07) 1px, transparent 1px);
+  background-size:32px 32px, 32px 32px;
+  mask-image: radial-gradient(90% 70% at 50% 50%, #000, transparent 75%);
+  -webkit-mask-image: radial-gradient(90% 70% at 50% 50%, #000, transparent 75%);
+}
+
+/* Drawing eyebrow — reads like a sheet callout */
+.callout{
+  display:inline-flex; align-items:center; gap:.7rem;
+  font-family:var(--mono); font-size:.68rem; font-weight:500;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--blue);
+  margin-bottom:1.1rem;
+}
+.callout::before{
+  content:""; width:34px; height:1px; background:currentColor; opacity:.65;
+}
+.callout .num{ color:var(--red); }
+.dark .callout{ color:var(--blue-lift); }
+
+/* Tick rule — a measuring stick, used as section divider */
+.rule{ position:relative; height:14px; margin-block:0; }
+.rule::before{
+  content:""; position:absolute; inset:auto 0 0 0; height:1px; background:var(--line);
+}
+.rule::after{
+  content:""; position:absolute; inset:auto 0 0 0; height:7px;
+  background-image:linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size:14px 100%;
+  mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+/* Corner tick marks for framed media */
+.ticks{ position:relative; }
+.ticks::before,.ticks::after{
+  content:""; position:absolute; width:16px; height:16px; pointer-events:none; z-index:2;
+  border-color:rgba(255,255,255,.7);
+}
+.ticks::before{ top:12px; left:12px; border-top:1px solid; border-left:1px solid; }
+.ticks::after{ bottom:12px; right:12px; border-bottom:1px solid; border-right:1px solid; }
+
+/* ---------- Section heading block ---------- */
+.head{ max-width:56ch; }
+.head h2{ font-size:clamp(1.9rem,3.4vw,3rem); }
+.head p{ margin-top:1rem; color:var(--text-soft); font-size:1.02rem; }
+.dark .head p{ color:#A9C2D6; }
+.head--wide{ max-width:70ch; }
+
+/* ---------- Buttons ---------- */
+.btn{
+  position:relative; overflow:hidden; isolation:isolate;
+  display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+  padding:.95rem 1.6rem; border-radius:10px; border:1px solid transparent;
+  font-family:var(--display); font-weight:600; font-size:.95rem; letter-spacing:-.01em;
+  cursor:pointer; transition:transform .35s var(--ease), box-shadow .35s var(--ease), background .3s, color .3s, border-color .3s;
+}
+.btn svg{ width:17px; height:17px; flex:none; transition:transform .35s var(--ease); }
+.btn:hover{ transform:translateY(-2px); }
+.btn:active{ transform:translateY(0); }
+.btn--primary{ background:var(--grad-blue); color:#fff; box-shadow:var(--sh-blue); }
+.btn--primary:hover{ box-shadow:0 24px 48px -18px rgba(14,107,182,.75); }
+.btn--primary:hover svg{ transform:translateX(3px); }
+.btn--ghost{ border-color:rgba(255,255,255,.35); color:#fff; background:rgba(255,255,255,.06); backdrop-filter:blur(8px); }
+.btn--ghost:hover{ background:rgba(255,255,255,.14); border-color:#fff; }
+.btn--outline{ border-color:var(--line); color:var(--blue); background:#fff; }
+.btn--outline:hover{ border-color:var(--blue); box-shadow:var(--sh-1); }
+.btn--red{ background:var(--red); color:#fff; box-shadow:0 18px 38px -18px rgba(224,52,58,.7); }
+/* ripple */
+.ripple{
+  position:absolute; border-radius:50%; transform:scale(0); z-index:-1;
+  background:rgba(255,255,255,.42); animation:ripple .6s ease-out forwards; pointer-events:none;
+}
+.btn--outline .ripple{ background:rgba(14,107,182,.22); }
+@keyframes ripple{ to{ transform:scale(3.2); opacity:0; } }
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:90;
+  transition:background .4s var(--ease), box-shadow .4s var(--ease), border-color .4s;
+  border-bottom:1px solid transparent;
+}
+.nav__in{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  height:80px; transition:height .4s var(--ease);
+}
+.nav.is-stuck{
+  background:rgba(6,20,36,.72);
+  backdrop-filter:blur(18px) saturate(150%);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);
+  border-bottom-color:rgba(255,255,255,.10);
+  box-shadow:0 12px 40px -22px rgba(0,0,0,.8);
+}
+.nav.is-stuck .nav__in{ height:66px; }
+
+.logo{ display:flex; align-items:center; gap:.75rem; }
+.logo__mark{
+  width:42px; height:42px; border-radius:10px; flex:none;
+  background:var(--grad-blue); display:grid; place-items:center;
+  font-family:var(--mono); font-weight:700; font-size:.72rem; color:#fff;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.4), var(--sh-blue);
+  letter-spacing:.02em;
+}
+.logo__txt{ line-height:1.1; }
+.logo__name{ font-family:var(--display); font-weight:700; font-size:1.02rem; color:#fff; letter-spacing:-.02em; }
+.logo__sub{ font-family:var(--mono); font-size:.58rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.62); }
+
+.nav__links{ display:flex; align-items:center; gap:.35rem; }
+.nav__link{
+  position:relative; padding:.55rem .9rem; border-radius:8px;
+  font-size:.9rem; font-weight:500; color:rgba(255,255,255,.78);
+  transition:color .25s;
+}
+.nav__link::after{
+  content:""; position:absolute; left:.9rem; right:.9rem; bottom:.28rem; height:2px;
+  background:var(--blue-lift); transform:scaleX(0); transform-origin:left;
+  transition:transform .38s var(--ease);
+}
+.nav__link:hover{ color:#fff; }
+.nav__link:hover::after{ transform:scaleX(1); }
+.nav__link.is-active{ color:#fff; }
+.nav__link.is-active::after{ transform:scaleX(1); background:var(--red); }
+.nav__cta{ margin-left:.6rem; padding:.7rem 1.15rem; font-size:.88rem; }
+
+.burger{
+  display:none; width:44px; height:44px; border:1px solid rgba(255,255,255,.22);
+  border-radius:10px; background:rgba(255,255,255,.06); cursor:pointer;
+  align-items:center; justify-content:center; flex-direction:column; gap:5px;
+}
+.burger span{ display:block; width:18px; height:1.5px; background:#fff; transition:transform .35s var(--ease), opacity .2s; }
+.burger.is-open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); }
+.burger.is-open span:nth-child(2){ opacity:0; }
+.burger.is-open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); }
+
+.drawer{
+  position:fixed; inset:0 0 0 auto; width:min(88vw,380px); z-index:95;
+  background:rgba(6,20,36,.96); backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-left:1px solid rgba(255,255,255,.1);
+  transform:translateX(100%); transition:transform .5s var(--ease);
+  padding:6.5rem 1.6rem 2rem; display:flex; flex-direction:column; gap:.2rem;
+}
+.drawer.is-open{ transform:translateX(0); }
+.drawer a{
+  padding:1rem .4rem; font-family:var(--display); font-size:1.35rem; font-weight:600;
+  color:rgba(255,255,255,.8); border-bottom:1px solid rgba(255,255,255,.08);
+  display:flex; justify-content:space-between; align-items:center;
+}
+.drawer a .idx{ font-family:var(--mono); font-size:.7rem; color:rgba(255,255,255,.35); }
+.drawer a.is-active{ color:var(--blue-lift); }
+.drawer a.is-active .idx{ color:var(--red); }
+.drawer__foot{ margin-top:auto; font-family:var(--mono); font-size:.7rem; color:rgba(255,255,255,.45); line-height:1.9; }
+.scrim{
+  position:fixed; inset:0; z-index:94; background:rgba(3,10,18,.6);
+  opacity:0; visibility:hidden; transition:opacity .4s; backdrop-filter:blur(2px);
+}
+.scrim.is-open{ opacity:1; visibility:visible; }
+
+/* ============================================================
+   PAGE SWITCHING
+   ============================================================ */
+.page{ display:none; }
+.page.is-current{ display:block; animation:pageIn .55s var(--ease) both; }
+@keyframes pageIn{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:none; } }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative; min-height:100svh; display:flex; align-items:center;
+  background:var(--navy); overflow:hidden; isolation:isolate;
+}
+.hero__media{ position:absolute; inset:-6% 0 0 0; z-index:-2; }
+.hero__media img{ width:100%; height:112%; object-fit:cover; }
+.hero__veil{
+  position:absolute; inset:0; z-index:-1;
+  background:
+    linear-gradient(100deg, rgba(6,20,36,.96) 8%, rgba(6,20,36,.80) 42%, rgba(10,78,134,.45) 78%, rgba(14,107,182,.28) 100%),
+    linear-gradient(0deg, rgba(6,20,36,.95) 2%, transparent 45%);
+}
+.hero__glow{
+  position:absolute; z-index:-1; width:62vw; height:62vw; right:-14vw; top:-18vw;
+  background:radial-gradient(circle, rgba(44,147,230,.30), transparent 62%);
+  filter:blur(20px); animation:float 16s ease-in-out infinite;
+}
+@keyframes float{ 0%,100%{ transform:translate3d(0,0,0);} 50%{ transform:translate3d(-2.5vw,3vw,0);} }
+.hero__in{ position:relative; z-index:2; padding-block:9rem 3rem; width:100%; }
+.hero__grid{ display:grid; gap:2rem; align-items:end; }
+.hero h1{
+  color:#fff; font-size:clamp(2.5rem,6vw,5.1rem); font-weight:700; letter-spacing:-.035em;
+  max-width:17ch;
+}
+.hero h1 em{
+  font-style:normal; color:var(--blue-lift);
+  background:linear-gradient(100deg,var(--blue-lift),#7FD0FF);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+.hero__lead{ margin-top:1.5rem; max-width:52ch; color:#B9CFE1; font-size:clamp(1rem,1.2vw,1.12rem); }
+.hero__cta{ display:flex; flex-wrap:wrap; gap:.85rem; margin-top:2.2rem; }
+.hero__strip{
+  position:relative; z-index:2; border-top:1px solid rgba(255,255,255,.14);
+  margin-top:clamp(2.5rem,6vw,4.5rem); display:grid; grid-template-columns:repeat(4,1fr);
+}
+.hero__stat{ padding:1.3rem 1.2rem 0 0; }
+.hero__stat b{
+  display:block; font-family:var(--display); font-size:clamp(1.5rem,2.4vw,2.1rem);
+  color:#fff; font-weight:700; letter-spacing:-.03em;
+}
+.hero__stat span{
+  font-family:var(--mono); font-size:.62rem; letter-spacing:.16em; text-transform:uppercase;
+  color:rgba(255,255,255,.55);
+}
+.hero__coord{
+  position:absolute; right:var(--pad); bottom:2rem; z-index:2; text-align:right;
+  font-family:var(--mono); font-size:.6rem; letter-spacing:.18em; color:rgba(255,255,255,.4);
+  line-height:2;
+}
+.scroll-hint{
+  position:absolute; left:var(--pad); bottom:2rem; z-index:2; display:flex; align-items:center; gap:.6rem;
+  font-family:var(--mono); font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.5);
+}
+.scroll-hint i{ display:block; width:1px; height:38px; background:linear-gradient(#fff,transparent); animation:drop 2.4s var(--ease) infinite; }
+@keyframes drop{ 0%{ transform:scaleY(0); transform-origin:top; } 45%{ transform:scaleY(1); transform-origin:top; } 55%{ transform:scaleY(1); transform-origin:bottom; } 100%{ transform:scaleY(0); transform-origin:bottom; } }
+
+/* ============================================================
+   PAGE BANNER (inner pages)
+   ============================================================ */
+.banner{
+  position:relative; min-height:clamp(300px,42vh,420px); display:flex; align-items:flex-end;
+  background:var(--navy); overflow:hidden; isolation:isolate;
+}
+.banner img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; }
+.banner::after{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:linear-gradient(90deg, rgba(6,20,36,.94), rgba(6,20,36,.62) 60%, rgba(14,107,182,.35));
+}
+.banner__in{ position:relative; z-index:2; padding-block:2.6rem; width:100%; padding-top:8rem; }
+.banner h1{ color:#fff; font-size:clamp(2.1rem,4.6vw,3.6rem); font-weight:700; }
+.banner p{ color:#A9C4D9; margin-top:.7rem; max-width:56ch; }
+.crumb{
+  font-family:var(--mono); font-size:.64rem; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(255,255,255,.5); margin-bottom:1rem; display:flex; gap:.6rem; align-items:center;
+}
+.crumb b{ color:var(--blue-lift); font-weight:500; }
+
+/* ============================================================
+   CARDS / GRIDS
+   ============================================================ */
+.grid{ display:grid; gap:var(--gap); }
+.g-2{ grid-template-columns:repeat(2,1fr); }
+.g-3{ grid-template-columns:repeat(3,1fr); }
+.g-4{ grid-template-columns:repeat(4,1fr); }
+
+.card{
+  position:relative; background:#fff; border:1px solid var(--gray-100);
+  border-radius:var(--r); padding:clamp(1.4rem,2vw,2rem);
+  transition:transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s;
+  overflow:hidden; isolation:isolate;
+}
+.card::before{
+  content:""; position:absolute; inset:0; z-index:-1; opacity:0;
+  background:radial-gradient(420px 220px at 12% 0%, rgba(14,107,182,.07), transparent 70%);
+  transition:opacity .45s var(--ease);
+}
+.card:hover{ transform:translateY(-6px); box-shadow:var(--sh-2); border-color:rgba(14,107,182,.3); }
+.card:hover::before{ opacity:1; }
+.card h3{ font-size:1.16rem; margin-bottom:.55rem; }
+.card p{ color:var(--text-soft); font-size:.93rem; }
+
+.ico{
+  width:52px; height:52px; border-radius:12px; display:grid; place-items:center;
+  background:linear-gradient(150deg, rgba(14,107,182,.12), rgba(44,147,230,.04));
+  border:1px solid rgba(14,107,182,.18); margin-bottom:1.15rem;
+  transition:background .45s var(--ease), transform .45s var(--ease), border-color .45s;
+}
+.ico svg{ width:24px; height:24px; stroke:var(--blue); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; transition:stroke .45s; }
+.card:hover .ico{ background:var(--grad-blue); border-color:transparent; transform:rotate(-4deg) scale(1.04); }
+.card:hover .ico svg{ stroke:#fff; }
+
+.card__idx{
+  position:absolute; top:1.1rem; right:1.25rem; font-family:var(--mono); font-size:.65rem;
+  color:var(--gray-300); letter-spacing:.1em; transition:color .4s;
+}
+.card:hover .card__idx{ color:var(--blue); }
+
+/* Featured service card with image */
+.svc{
+  display:flex; flex-direction:column; background:#fff; border:1px solid var(--gray-100);
+  border-radius:var(--r-lg); overflow:hidden; isolation:isolate;
+  transition:transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.svc:hover{ transform:translateY(-8px); box-shadow:var(--sh-2); }
+.svc__fig{ position:relative; aspect-ratio:16/10; overflow:hidden; background:var(--navy); }
+.svc__fig img{ width:100%; height:100%; object-fit:cover; transition:transform 1.1s var(--ease), filter .6s; filter:saturate(.85) contrast(1.03); }
+.svc:hover .svc__fig img{ transform:scale(1.07); filter:saturate(1) contrast(1.03); }
+.svc__fig::after{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(6,20,36,.55), transparent 55%); }
+.svc__tag{
+  position:absolute; z-index:2; left:1rem; bottom:1rem; padding:.35rem .65rem; border-radius:6px;
+  font-family:var(--mono); font-size:.6rem; letter-spacing:.16em; text-transform:uppercase; color:#fff;
+  background:rgba(6,20,36,.55); border:1px solid rgba(255,255,255,.22); backdrop-filter:blur(8px);
+}
+.svc__body{ padding:1.5rem 1.5rem 1.7rem; display:flex; flex-direction:column; gap:.55rem; flex:1; }
+.svc__body h3{ font-size:1.2rem; }
+.svc__body p{ color:var(--text-soft); font-size:.93rem; }
+.svc__more{
+  margin-top:auto; padding-top:1rem; display:inline-flex; align-items:center; gap:.5rem;
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--blue);
+}
+.svc__more svg{ width:14px; height:14px; transition:transform .4s var(--ease); }
+.svc:hover .svc__more svg{ transform:translateX(4px); }
+
+/* Additional services — compact list grid */
+.mini{
+  display:flex; align-items:center; gap:.9rem; padding:1rem 1.1rem;
+  border:1px solid var(--line); border-radius:10px; background:rgba(255,255,255,.55);
+  backdrop-filter:blur(6px);
+  transition:background .35s, transform .35s var(--ease), border-color .35s;
+}
+.mini:hover{ background:#fff; transform:translateX(5px); border-color:var(--blue); }
+.mini svg{ width:20px; height:20px; stroke:var(--blue); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; flex:none; }
+.mini b{ font-family:var(--display); font-weight:600; font-size:.96rem; }
+.mini small{ display:block; color:var(--text-soft); font-size:.8rem; font-weight:400; }
+
+/* ---------- Why choose us ---------- */
+.why{
+  position:relative; padding:1.35rem 1.35rem 1.35rem 1.35rem; border-radius:12px;
+  background:var(--grad-glass); border:1px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  transition:border-color .4s, transform .4s var(--ease), background .4s;
+}
+.why:hover{ border-color:rgba(44,147,230,.55); transform:translateY(-4px); }
+.why__k{ display:flex; align-items:center; gap:.7rem; margin-bottom:.45rem; }
+.why__k svg{ width:18px; height:18px; stroke:var(--blue-lift); fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.why__k b{ font-family:var(--display); font-size:1rem; font-weight:600; color:#fff; }
+.why p{ color:#9DB8CE; font-size:.86rem; line-height:1.6; }
+
+/* ---------- Process ---------- */
+.proc{ display:grid; grid-template-columns:repeat(5,1fr); gap:0; border-top:1px solid var(--line); }
+.proc__i{ position:relative; padding:2rem 1.4rem 0 0; }
+.proc__i::before{
+  content:""; position:absolute; top:-1px; left:0; width:0; height:2px; background:var(--blue);
+  transition:width 1.1s var(--ease);
+}
+.proc__i.on::before{ width:calc(100% - 1.4rem); }
+.proc__n{ font-family:var(--mono); font-size:.68rem; color:var(--red); letter-spacing:.16em; }
+.proc__i h3{ font-size:1.06rem; margin:.65rem 0 .5rem; }
+.proc__i p{ font-size:.87rem; color:var(--text-soft); }
+
+/* ---------- Stats ---------- */
+.stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:var(--gap); }
+.stat{
+  position:relative; padding:1.9rem 1.4rem; border-radius:var(--r);
+  background:var(--grad-glass); border:1px solid rgba(255,255,255,.13);
+  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); overflow:hidden;
+}
+.stat::after{
+  content:""; position:absolute; left:0; top:0; bottom:0; width:2px; background:var(--grad-blue);
+}
+.stat b{ display:block; font-family:var(--display); font-weight:700; font-size:clamp(2rem,3.4vw,2.9rem); color:#fff; letter-spacing:-.04em; }
+.stat b .suf{ color:var(--blue-lift); }
+.stat span{ font-family:var(--mono); font-size:.62rem; letter-spacing:.18em; text-transform:uppercase; color:#8FAFC8; }
+
+/* ---------- Split media block ---------- */
+.split{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4.5rem); align-items:center; }
+.split__fig{ position:relative; border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--sh-2); }
+.split__fig img{ width:100%; aspect-ratio:4/3.2; object-fit:cover; }
+.split__badge{
+  position:absolute; z-index:3; right:-1px; bottom:-1px; padding:1.15rem 1.4rem;
+  background:var(--grad-blue); border-radius:var(--r-lg) 0 var(--r-lg) 0; color:#fff;
+  box-shadow:var(--sh-blue);
+}
+.split__badge b{ display:block; font-family:var(--display); font-size:1.8rem; font-weight:700; letter-spacing:-.03em; line-height:1; }
+.split__badge span{ font-family:var(--mono); font-size:.58rem; letter-spacing:.16em; text-transform:uppercase; opacity:.85; }
+
+/* ---------- Timeline ---------- */
+.tl{ position:relative; padding-left:2.2rem; }
+.tl::before{ content:""; position:absolute; left:6px; top:8px; bottom:8px; width:1px; background:linear-gradient(var(--blue), rgba(14,107,182,.05)); }
+.tl__i{ position:relative; padding-bottom:2.1rem; }
+.tl__i:last-child{ padding-bottom:0; }
+.tl__i::before{
+  content:""; position:absolute; left:-2.2rem; top:6px; width:13px; height:13px; border-radius:50%;
+  background:#fff; border:2px solid var(--blue); transition:transform .4s var(--ease), background .4s;
+}
+.tl__i:hover::before{ background:var(--red); border-color:var(--red); transform:scale(1.25); }
+.tl__y{ font-family:var(--mono); font-size:.72rem; color:var(--blue); letter-spacing:.14em; }
+.tl__i h3{ font-size:1.08rem; margin:.35rem 0 .35rem; }
+.tl__i p{ font-size:.9rem; color:var(--text-soft); }
+
+/* ---------- Values ---------- */
+.val{
+  padding:1.5rem 1.4rem; border-left:2px solid var(--line); background:#fff;
+  transition:border-color .4s, transform .4s var(--ease);
+}
+.val:hover{ border-left-color:var(--red); transform:translateX(5px); }
+.val h3{ font-size:1.02rem; margin-bottom:.4rem; }
+.val p{ font-size:.88rem; color:var(--text-soft); }
+.val__n{ font-family:var(--mono); font-size:.64rem; color:var(--blue); letter-spacing:.16em; }
+
+/* ---------- Testimonials ---------- */
+.quote{
+  position:relative; background:#fff; border:1px solid var(--gray-100); border-radius:var(--r-lg);
+  padding:1.9rem 1.7rem 1.5rem; display:flex; flex-direction:column; gap:1rem; height:100%;
+  transition:transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s;
+}
+.quote:hover{ transform:translateY(-6px); box-shadow:var(--sh-2); border-color:rgba(14,107,182,.3); }
+.quote__mark{
+  position:absolute; top:1rem; right:1.4rem; font-family:var(--display); font-size:4.5rem; font-weight:700;
+  color:rgba(14,107,182,.08); line-height:1; user-select:none;
+}
+.stars{ display:flex; gap:3px; }
+.stars svg{ width:15px; height:15px; fill:#F5A623; }
+.quote p{ font-size:.95rem; color:#33414F; }
+.quote__who{ display:flex; align-items:center; gap:.85rem; margin-top:auto; padding-top:1rem; border-top:1px solid var(--gray-100); }
+.avatar{
+  width:44px; height:44px; border-radius:50%; flex:none; display:grid; place-items:center;
+  background:var(--grad-blue); color:#fff; font-family:var(--mono); font-weight:700; font-size:.8rem;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35);
+}
+.quote__who b{ display:block; font-family:var(--display); font-size:.95rem; }
+.quote__who span{ font-size:.79rem; color:var(--text-soft); }
+.quote__proj{
+  font-family:var(--mono); font-size:.58rem; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--blue); background:rgba(14,107,182,.08); padding:.3rem .55rem; border-radius:5px;
+  align-self:flex-start;
+}
+
+/* ---------- FAQ accordion ---------- */
+.faq{ border-bottom:1px solid var(--line); }
+.faq__q{
+  width:100%; background:none; border:0; cursor:pointer; text-align:left;
+  display:flex; align-items:center; gap:1.2rem; padding:1.35rem .4rem;
+  font-family:var(--display); font-weight:600; font-size:clamp(1rem,1.4vw,1.14rem);
+  transition:color .3s, padding-left .35s var(--ease);
+}
+.faq__q:hover{ color:var(--blue); padding-left:.9rem; }
+.faq__q .n{ font-family:var(--mono); font-size:.66rem; color:var(--blue); font-weight:500; flex:none; }
+.faq__q .t{ flex:1; }
+.faq__sign{ position:relative; width:22px; height:22px; flex:none; }
+.faq__sign::before,.faq__sign::after{
+  content:""; position:absolute; background:var(--blue); border-radius:2px;
+  transition:transform .4s var(--ease), background .3s;
+}
+.faq__sign::before{ top:50%; left:0; width:100%; height:1.5px; transform:translateY(-50%); }
+.faq__sign::after{ left:50%; top:0; height:100%; width:1.5px; transform:translateX(-50%); }
+.faq.is-open .faq__sign::after{ transform:translateX(-50%) rotate(90deg); }
+.faq.is-open .faq__sign::before{ background:var(--red); }
+.faq.is-open .faq__q{ color:var(--blue); }
+.faq__a{ overflow:hidden; height:0; transition:height .45s var(--ease); }
+.faq__a > div{ padding:0 3.4rem 1.5rem; color:var(--text-soft); font-size:.95rem; max-width:78ch; }
+
+/* ---------- Contact ---------- */
+.contact-card{
+  background:var(--grad-glass); border:1px solid rgba(255,255,255,.13); border-radius:var(--r-lg);
+  padding:1.7rem; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  display:flex; flex-direction:column; gap:.5rem;
+  transition:border-color .4s, transform .4s var(--ease);
+}
+.contact-card:hover{ border-color:rgba(44,147,230,.5); transform:translateY(-4px); }
+.contact-card .ico{ background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.16); }
+.contact-card .ico svg{ stroke:var(--blue-lift); }
+.contact-card h3{ font-size:1.05rem; }
+.contact-card p, .contact-card a{ color:#A9C4D9; font-size:.92rem; }
+.contact-card a:hover{ color:#fff; }
+.hours{ display:flex; justify-content:space-between; gap:1rem; padding:.5rem 0; border-bottom:1px dashed rgba(255,255,255,.12); font-size:.88rem; }
+.hours:last-child{ border-bottom:0; }
+.hours b{ color:#fff; font-weight:500; }
+.hours span{ font-family:var(--mono); font-size:.78rem; color:#8FAFC8; }
+
+.map{
+  position:relative; border-radius:var(--r-lg); overflow:hidden; min-height:340px;
+  border:1px solid rgba(255,255,255,.14); background:
+    linear-gradient(rgba(44,147,230,.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(44,147,230,.10) 1px, transparent 1px),
+    radial-gradient(600px 300px at 50% 50%, rgba(14,107,182,.28), transparent 70%),
+    #071A2C;
+  background-size:26px 26px, 26px 26px, 100% 100%, 100% 100%;
+  display:grid; place-items:center; text-align:center; padding:2rem;
+}
+.map__pin{
+  width:56px; height:56px; border-radius:50%; margin:0 auto 1rem; display:grid; place-items:center;
+  background:var(--grad-blue); box-shadow:0 0 0 0 rgba(44,147,230,.5); animation:pulse 2.6s infinite;
+}
+.map__pin svg{ width:24px; height:24px; stroke:#fff; fill:none; stroke-width:1.6; }
+@keyframes pulse{ 70%{ box-shadow:0 0 0 26px rgba(44,147,230,0); } 100%{ box-shadow:0 0 0 0 rgba(44,147,230,0); } }
+.map b{ display:block; font-family:var(--display); color:#fff; font-size:1.1rem; }
+.map span{ font-family:var(--mono); font-size:.68rem; letter-spacing:.14em; color:#8FAFC8; }
+
+.social{ display:flex; gap:.6rem; }
+.social a{
+  width:42px; height:42px; border-radius:10px; display:grid; place-items:center;
+  border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.05);
+  transition:background .3s, transform .3s var(--ease), border-color .3s;
+}
+.social a svg{ width:17px; height:17px; stroke:#B9CFE1; fill:none; stroke-width:1.6; }
+.social a:hover{ background:var(--blue); border-color:var(--blue); transform:translateY(-3px); }
+.social a:hover svg{ stroke:#fff; }
+
+/* ---------- CTA band ---------- */
+.band{
+  position:relative; overflow:hidden; border-radius:var(--r-lg); isolation:isolate;
+  background:var(--grad-blue); padding:clamp(2.2rem,5vw,3.6rem); color:#fff;
+  box-shadow:var(--sh-blue);
+}
+.band::before{
+  content:""; position:absolute; inset:0; z-index:-1; opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px),
+                   linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px);
+  background-size:44px 44px;
+  mask-image:linear-gradient(100deg, transparent 30%, #000);
+  -webkit-mask-image:linear-gradient(100deg, transparent 30%, #000);
+}
+.band h2{ font-size:clamp(1.6rem,3vw,2.4rem); max-width:20ch; }
+.band p{ color:rgba(255,255,255,.82); margin-top:.8rem; max-width:46ch; }
+.band__row{ display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; flex-wrap:wrap; }
+.band .btn--ghost{ border-color:rgba(255,255,255,.6); }
+.band .btn--white{ background:#fff; color:var(--blue-deep); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.foot{ background:var(--ink); color:#8FA6BA; position:relative; overflow:hidden; }
+.foot__top{ display:grid; grid-template-columns:1.6fr 1fr 1fr 1.3fr; gap:2.5rem; padding-block:clamp(3rem,6vw,4.5rem); }
+.foot h4{
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.2em; text-transform:uppercase;
+  color:#fff; margin-bottom:1.15rem; font-weight:500;
+}
+.foot li{ margin-bottom:.6rem; }
+.foot a{ font-size:.9rem; transition:color .25s, padding-left .3s var(--ease); display:inline-block; }
+.foot a:hover{ color:var(--blue-lift); padding-left:5px; }
+.foot__about{ font-size:.9rem; max-width:38ch; margin-top:1.1rem; line-height:1.75; }
+.foot__meta{ font-family:var(--mono); font-size:.7rem; color:#5E7285; line-height:2; margin-top:1.2rem; }
+.foot__bar{
+  border-top:1px solid rgba(255,255,255,.08); padding-block:1.4rem;
+  display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;
+  font-family:var(--mono); font-size:.68rem; color:#5E7285; letter-spacing:.04em;
+}
+.foot__bar b{ color:#8FA6BA; font-weight:400; }
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.rv{ opacity:0; transform:translateY(22px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
+.rv.on{ opacity:1; transform:none; }
+.rv-l{ opacity:0; transform:translateX(-26px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
+.rv-l.on{ opacity:1; transform:none; }
+.rv-r{ opacity:0; transform:translateX(26px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
+.rv-r.on{ opacity:1; transform:none; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1080px){
+  .g-4{ grid-template-columns:repeat(2,1fr); }
+  .proc{ grid-template-columns:repeat(3,1fr); row-gap:1.5rem; }
+  .foot__top{ grid-template-columns:1fr 1fr; gap:2rem; }
+}
+@media (max-width:900px){
+  .nav__links{ display:none; }
+  .burger{ display:flex; }
+  .g-3{ grid-template-columns:repeat(2,1fr); }
+  .split{ grid-template-columns:1fr; }
+  .stats{ grid-template-columns:repeat(2,1fr); }
+  .hero__strip{ grid-template-columns:repeat(2,1fr); row-gap:.5rem; }
+  .hero__coord{ display:none; }
+}
+@media (max-width:640px){
+  .g-2,.g-3,.g-4{ grid-template-columns:1fr; }
+  .proc{ grid-template-columns:1fr; }
+  .proc__i{ padding:1.4rem 0 0 0; border-top:1px solid var(--line); }
+  .proc__i:first-child{ border-top:0; }
+  .proc__i::before{ display:none; }
+  .stats{ grid-template-columns:1fr; }
+  .foot__top{ grid-template-columns:1fr; }
+  .scroll-hint{ display:none; }
+  .faq__a > div{ padding-left:0; padding-right:0; }
+  .hero__in{ padding-block:7.5rem 5rem; }
+  .split__badge{ position:static; border-radius:0; }
+}
+@media (min-width:1800px){ :root{ --maxw:1480px; } }
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+  .rv,.rv-l,.rv-r{ opacity:1; transform:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================ NAVIGATION ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a href="/" class="logo" data-route="home" aria-label="J.S.G Construction, back to home">
+      <span class="logo__mark">JSG</span>
+      <span class="logo__txt">
+        <span class="logo__name">J.S.G Construction</span>
+        <span class="logo__sub">Est. 2007 · Kampala</span>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="Main">
+      <a class="nav__link" href="/"            data-route="home">Home</a>
+      <a class="nav__link" href="/about"       data-route="about">About</a>
+      <a class="nav__link" href="/services"    data-route="services">Services</a>
+      <a class="nav__link" href="/testimonials" data-route="testimonials">Testimonials</a>
+      <a class="nav__link" href="/faqs"        data-route="faqs">FAQs</a>
+      <a class="nav__link" href="/contact"     data-route="contact">Contact</a>
+      <a class="btn btn--primary nav__cta" href="tel:0414580857">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        0414 580857
+      </a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <a href="/"             data-route="home">Home <em class="idx">01</em></a>
+  <a href="/about"        data-route="about">About <em class="idx">02</em></a>
+  <a href="/services"     data-route="services">Services <em class="idx">03</em></a>
+  <a href="/testimonials" data-route="testimonials">Testimonials <em class="idx">04</em></a>
+  <a href="/faqs"         data-route="faqs">FAQs <em class="idx">05</em></a>
+  <a href="/contact"      data-route="contact">Contact <em class="idx">06</em></a>
+  <div class="drawer__foot">
+    Yusuf Lule Road, Kampala<br>
+    0414 580857<br>
+    jsgconstruction.ug@gmail.com
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ============================ HOME ============================ -->
+<section class="page" id="page-home" aria-label="Home">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero__media">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80" alt="Tower cranes rising over a construction site at dusk" fetchpriority="high">
+    </div>
+    <div class="hero__veil"></div>
+    <div class="hero__glow"></div>
+    <div class="blueprint"></div>
+
+    <div class="wrap hero__in">
+      <p class="callout"><span class="num">SHEET 01</span> — GENERAL CONTRACTOR · UGANDA</p>
+      <h1>Building Uganda's future with <em>excellence, innovation</em> &amp; precision.</h1>
+      <p class="hero__lead">Since 2007 we have delivered residential, commercial, institutional and infrastructure projects across the country — from first sketch to final handover, under one accountable team.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="/services" data-route="services">
+          Explore our services
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="/contact" data-route="contact">Start a project</a>
+      </div>
+
+      <div class="hero__strip">
+        <div class="hero__stat"><b>2007</b><span>Established</span></div>
+        <div class="hero__stat"><b>380+</b><span>Projects delivered</span></div>
+        <div class="hero__stat"><b>18 yrs</b><span>On Ugandan sites</span></div>
+        <div class="hero__stat"><b>100%</b><span>Turnkey capability</span></div>
+      </div>
+    </div>
+
+    <div class="scroll-hint"><i></i> Scroll</div>
+    <div class="hero__coord">
+      LAT 00°19'N &nbsp;LON 32°35'E<br>
+      YUSUF LULE RD · KAMPALA
+    </div>
+  </div>
+
+  <!-- Highlights -->
+  <div class="sect-pad" style="position:relative; overflow:hidden;">
+    <div class="blueprint blueprint--light"></div>
+    <div class="wrap" style="position:relative;">
+      <div class="grid g-2" style="align-items:end; gap:2rem;">
+        <div class="head rv">
+          <p class="callout"><span class="num">01</span> — Who we are</p>
+          <h2>One contractor, accountable from concept to completion.</h2>
+        </div>
+        <p class="rv" style="color:var(--text-soft);">J.S.G Construction Company Ltd combines engineering discipline with skilled workmanship and honest project management. Every project begins with a strong partnership and ends with a building that earns its keep.</p>
+      </div>
+
+      <div class="grid g-4 rv" style="margin-top:3rem;">
+        <div class="card">
+          <span class="card__idx">01</span>
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V8l8-5 8 5v12M9 20v-6h6v6"/></svg></div>
+          <h3>Design &amp; build</h3>
+          <p>A single contract covering architecture, structure and construction — fewer gaps, faster decisions.</p>
+        </div>
+        <div class="card">
+          <span class="card__idx">02</span>
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/><path d="M3 7l9 5 9-5M12 22V12"/></svg></div>
+          <h3>Engineered quality</h3>
+          <p>Structural checks, tested materials and supervised workmanship on every pour and every joint.</p>
+        </div>
+        <div class="card">
+          <span class="card__idx">03</span>
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+          <h3>Programme certainty</h3>
+          <p>Realistic schedules, weekly progress reporting and a site team that protects your handover date.</p>
+        </div>
+        <div class="card">
+          <span class="card__idx">04</span>
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Safety first</h3>
+          <p>Trained crews, protective equipment and daily briefings — because nobody's job is worth an injury.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured services -->
+  <div class="sect-pad tint">
+    <div class="wrap">
+      <div class="grid g-2" style="align-items:end; gap:2rem;">
+        <div class="head rv">
+          <p class="callout"><span class="num">02</span> — What we build</p>
+          <h2>Featured services</h2>
+          <p>Six core disciplines that cover the whole life of a build — and the specialist trades that finish it properly.</p>
+        </div>
+        <div class="rv" style="justify-self:end;">
+          <a class="btn btn--outline" href="/services" data-route="services">
+            See all 15 services
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid g-3 rv" style="margin-top:3rem;">
+        <article class="svc">
+          <figure class="svc__fig ticks">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80" alt="Modern high-rise under construction">
+            <span class="svc__tag">Core discipline</span>
+          </figure>
+          <div class="svc__body">
+            <h3>Building construction</h3>
+            <p>Full main-contract delivery for new builds of every scale — foundations, frame, envelope and fit-out.</p>
+            <span class="svc__more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+        <article class="svc">
+          <figure class="svc__fig ticks">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=900&q=80" alt="Completed modern residential home">
+            <span class="svc__tag">Homes</span>
+          </figure>
+          <div class="svc__body">
+            <h3>Residential construction</h3>
+            <p>Family homes, apartments and estates built to live in for decades, not just to hand over.</p>
+            <span class="svc__more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+        <article class="svc">
+          <figure class="svc__fig ticks">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="Glass commercial office tower">
+            <span class="svc__tag">Commercial</span>
+          </figure>
+          <div class="svc__body">
+            <h3>Commercial construction</h3>
+            <p>Offices, retail and mixed-use developments delivered around your opening date and your budget.</p>
+            <span class="svc__more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+        <article class="svc">
+          <figure class="svc__fig ticks">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80" alt="Contemporary architectural facade">
+            <span class="svc__tag">Design</span>
+          </figure>
+          <div class="svc__body">
+            <h3>Architectural design</h3>
+            <p>Drawings that respect your site, your climate and your budget — approved and ready to build.</p>
+            <span class="svc__more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+        <article class="svc">
+          <figure class="svc__fig ticks">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80" alt="Engineer reviewing structural work on site">
+            <span class="svc__tag">Engineering</span>
+          </figure>
+          <div class="svc__body">
+            <h3>Structural engineering</h3>
+            <p>Calculations, detailing and site supervision that keep the structure honest under real loads.</p>
+            <span class="svc__more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+        <article class="svc">
+          <figure class="svc__fig ticks">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="Project team planning around a table">
+            <span class="svc__tag">Management</span>
+          </figure>
+          <div class="svc__body">
+            <h3>Project planning &amp; management</h3>
+            <p>Programme, cost control and reporting you can actually read — no surprises at month end.</p>
+            <span class="svc__more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why choose us -->
+  <div class="sect-pad dark" style="position:relative; overflow:hidden;">
+    <div class="blueprint"></div>
+    <div class="wrap" style="position:relative;">
+      <div class="head head--wide rv">
+        <p class="callout"><span class="num">03</span> — Why choose us</p>
+        <h2>Ten reasons clients keep calling us back.</h2>
+        <p>Nothing here is a slogan. Each one is something you can hold us to on site.</p>
+      </div>
+
+      <div class="grid g-3 rv" style="margin-top:2.8rem;">
+        <div class="why"><div class="why__k"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><b>Experienced professionals</b></div><p>Engineers, foremen and artisans who have run Ugandan sites for years, not months.</p></div>
+        <div class="why"><div class="why__k"><svg viewBox="0 0 24 24"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><b>Quality workmanship</b></div><p>Level floors, true walls, clean finishes. We inspect before you do.</p></div>
+        <div class="why"><div class="why__k"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><b>On-time delivery</b></div><p>Programmes built on real productivity rates, then protected week by week.</p></div>
+        <div class="why"><div class="why__k"><svg viewBox="0 0 24 24"><path d="M2 3h20v14H2z"/><path d="M8 21h8M12 17v4"/></svg><b>Transparent management</b></div><p>Open costs, itemised valuations and progress you can verify yourself.</p></div>
+        <div class="why"><div class="why__k"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.9 2.9M16.2 16.2l2.9 2.9M2 12h4M18 12h4M4.9 19.1l2.9-2.9M16.2 7.8l2.9-2.9"/></svg><b>Modern technology</b></div><p>Digital drawings, surveying instruments and tested plant on every project.</p></div>
+        <div class="why"><div class="why__k"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg><b>Safety-first culture</b></div><p>Daily briefings, PPE without exception, and a site that stays orderly.</p></div>
+        <div class="why"><div class="why__k"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><b>Competitive pricing</b></div><p>Priced from measured quantities, so the number holds up when work starts.</p></div>
+        <div class="why"><div class="why__k"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><b>Reliable support</b></div><p>One point of contact who answers, during the build and long after it.</p></div>
+        <div class="why"><div class="why__k"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.7 4.5-7"/></svg><b>Sustainable practices</b></div><p>Local materials where they perform, less waste, and sites we leave clean.</p></div>
+        <div class="why"><div class="why__k"><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><b>Commitment to excellence</b></div><p>The snag list is finished before we ask for the final certificate.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Process -->
+  <div class="sect-pad">
+    <div class="wrap">
+      <div class="head rv">
+        <p class="callout"><span class="num">04</span> — How we work</p>
+        <h2>Five stages, in this order, every time.</h2>
+        <p>The sequence never changes — it is what keeps cost, quality and programme in the same conversation.</p>
+      </div>
+      <div class="proc rv" style="margin-top:2.6rem;">
+        <div class="proc__i js-proc"><span class="proc__n">STAGE 01</span><h3>Consultation</h3><p>We visit the site, listen to what you need, and tell you honestly what it will take.</p></div>
+        <div class="proc__i js-proc"><span class="proc__n">STAGE 02</span><h3>Design</h3><p>Architectural and structural drawings developed to your brief, budget and approvals.</p></div>
+        <div class="proc__i js-proc"><span class="proc__n">STAGE 03</span><h3>Costing</h3><p>Measured quantities and a priced bill you can read line by line before signing.</p></div>
+        <div class="proc__i js-proc"><span class="proc__n">STAGE 04</span><h3>Construction</h3><p>Supervised works, tested materials, weekly reports and photographs from site.</p></div>
+        <div class="proc__i js-proc"><span class="proc__n">STAGE 05</span><h3>Handover</h3><p>Snags cleared, systems demonstrated, documents filed, defects covered.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="sect-pad dark" style="position:relative; overflow:hidden;">
+    <div class="blueprint"></div>
+    <div class="wrap" style="position:relative;">
+      <div class="grid g-2" style="align-items:end; gap:2rem; margin-bottom:2.6rem;">
+        <div class="head rv">
+          <p class="callout"><span class="num">05</span> — Record to date</p>
+          <h2>Eighteen years, measured.</h2>
+        </div>
+        <p class="rv" style="color:#A9C2D6;">Figures reflect works completed by J.S.G Construction Company Ltd across Uganda since incorporation in 2007.</p>
+      </div>
+      <div class="stats rv">
+        <div class="stat"><b><span class="count" data-to="380">0</span><span class="suf">+</span></b><span>Projects completed</span></div>
+        <div class="stat"><b><span class="count" data-to="18">0</span><span class="suf"> yrs</span></b><span>In operation</span></div>
+        <div class="stat"><b><span class="count" data-to="240">0</span><span class="suf">+</span></b><span>Skilled personnel</span></div>
+        <div class="stat"><b><span class="count" data-to="96">0</span><span class="suf">%</span></b><span>Repeat &amp; referred clients</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="sect-pad tint">
+    <div class="wrap">
+      <div class="band rv">
+        <div class="band__row">
+          <div>
+            <p class="callout" style="color:rgba(255,255,255,.75)"><span class="num" style="color:#fff">NEXT</span> — Let's build</p>
+            <h2>Tell us about your site. We'll tell you what it takes.</h2>
+            <p>A first conversation costs nothing and usually saves money later. Call the office or send the drawings you already have.</p>
+          </div>
+          <div style="display:flex; gap:.8rem; flex-wrap:wrap;">
+            <a class="btn btn--white" href="tel:0414580857">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+              Call 0414 580857
+            </a>
+            <a class="btn btn--ghost" href="mailto:jsgconstruction.ug@gmail.com">Email the office</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="page" id="page-about" aria-label="About">
+  <div class="banner">
+    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80" alt="Construction professionals working on a structure">
+    <div class="blueprint"></div>
+    <div class="wrap banner__in">
+      <p class="crumb">Home <span>/</span> <b>About</b></p>
+      <h1>Eighteen years of building in Uganda.</h1>
+      <p>Incorporated in 2007. Still run by the people who started it, still on site every week.</p>
+    </div>
+  </div>
+
+  <!-- Story -->
+  <div class="sect-pad">
+    <div class="wrap split">
+      <div class="split__fig rv-l">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80" alt="Modern building under construction against the sky">
+        <div class="split__badge"><b>2007</b><span>Year established</span></div>
+      </div>
+      <div class="rv-r">
+        <p class="callout"><span class="num">01</span> — Our story</p>
+        <h2 style="font-size:clamp(1.8rem,3.2vw,2.7rem);">A contractor built on repeat business.</h2>
+        <p style="margin-top:1.1rem; color:var(--text-soft);">J.S.G Construction Company Ltd started in 2007 with a small team, a pickup and a conviction that Ugandan clients deserved a contractor who finishes what he starts. The first jobs were residential. The referrals that followed turned into commercial buildings, institutional facilities and civil works.</p>
+        <p style="margin-top:1rem; color:var(--text-soft);">Today we run projects from concept and design through to construction and completion — a complete turnkey service — while keeping the same standards of quality, safety, durability and client satisfaction that got us the second job.</p>
+        <p style="margin-top:1rem; color:var(--text-soft);">We still believe every successful project begins the same way: a strong partnership, technical excellence, transparency, and attention to the details nobody else notices until it rains.</p>
+        <div style="display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1.9rem;">
+          <a class="btn btn--primary" href="/contact" data-route="contact">Talk to the team
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--outline" href="/services" data-route="services">What we do</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mission / Vision -->
+  <div class="sect-pad dark" style="position:relative; overflow:hidden;">
+    <div class="blueprint"></div>
+    <div class="wrap" style="position:relative;">
+      <div class="grid g-2 rv" style="gap:var(--gap);">
+        <div class="why" style="padding:2.2rem;">
+          <p class="callout"><span class="num">02</span> — Mission</p>
+          <h3 style="font-size:1.5rem; margin-bottom:.9rem;">Deliver buildings that work, on the day we promised.</h3>
+          <p style="font-size:.98rem;">To provide complete construction solutions — engineering, workmanship and management — that meet international standards of quality and safety, at prices Ugandan clients can plan around.</p>
+        </div>
+        <div class="why" style="padding:2.2rem;">
+          <p class="callout"><span class="num">03</span> — Vision</p>
+          <h3 style="font-size:1.5rem; margin-bottom:.9rem;">To be the contractor Uganda's builders recommend first.</h3>
+          <p style="font-size:.98rem;">To lead construction in the region through innovative engineering, sustainable practice and partnerships that outlast the projects that started them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core values -->
+  <div class="sect-pad tint">
+    <div class="wrap">
+      <div class="head rv">
+        <p class="callout"><span class="num">04</span> — Core values</p>
+        <h2>Six things we don't trade away.</h2>
+      </div>
+      <div class="grid g-3 rv" style="margin-top:2.6rem;">
+        <div class="val"><span class="val__n">V.01</span><h3>Integrity</h3><p>The price we quote is the price we hold. If something changes, you hear it from us first.</p></div>
+        <div class="val"><span class="val__n">V.02</span><h3>Precision</h3><p>Set out correctly, checked twice. Accuracy at the foundation saves months at the finish.</p></div>
+        <div class="val"><span class="val__n">V.03</span><h3>Safety</h3><p>Every worker goes home. No programme is worth more than that.</p></div>
+        <div class="val"><span class="val__n">V.04</span><h3>Durability</h3><p>We build for Ugandan rain, sun and soil — not for the photograph on handover day.</p></div>
+        <div class="val"><span class="val__n">V.05</span><h3>Partnership</h3><p>Clients, consultants and subcontractors on one team, reading the same drawings.</p></div>
+        <div class="val"><span class="val__n">V.06</span><h3>Transparency</h3><p>Open books, itemised valuations, and progress you can check without asking twice.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline + commitment -->
+  <div class="sect-pad">
+    <div class="wrap split" style="align-items:start;">
+      <div class="rv-l">
+        <p class="callout"><span class="num">05</span> — Milestones</p>
+        <h2 style="font-size:clamp(1.8rem,3.2vw,2.5rem); margin-bottom:2rem;">From one crew to a full contracting team.</h2>
+        <div class="tl">
+          <div class="tl__i"><span class="tl__y">2007</span><h3>Incorporated in Kampala</h3><p>J.S.G Construction Company Ltd registered and opened for residential works.</p></div>
+          <div class="tl__i"><span class="tl__y">2011</span><h3>First commercial contract</h3><p>Moved into retail and office construction, and hired our first in-house engineer.</p></div>
+          <div class="tl__i"><span class="tl__y">2014</span><h3>Design &amp; build launched</h3><p>Architectural and structural design brought under the same roof as construction.</p></div>
+          <div class="tl__i"><span class="tl__y">2018</span><h3>Civil works division</h3><p>Roads, drainage and external works added for institutional and estate clients.</p></div>
+          <div class="tl__i"><span class="tl__y">2022</span><h3>Digital site management</h3><p>Digital drawings, survey instruments and weekly photographic reporting standardised.</p></div>
+          <div class="tl__i"><span class="tl__y">Today</span><h3>Turnkey delivery</h3><p>Concept to completion for residential, commercial, institutional and infrastructure work.</p></div>
+        </div>
+      </div>
+      <div class="rv-r">
+        <div class="split__fig">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="Project team reviewing plans together">
+        </div>
+        <div class="card" style="margin-top:1.2rem;">
+          <p class="callout"><span class="num">06</span> — Our commitment</p>
+          <h3 style="font-size:1.3rem; margin-bottom:.7rem;">What you get from us, in writing.</h3>
+          <p style="margin-bottom:1rem;">A named project manager, a priced programme, weekly progress reporting, tested materials, a clean site, and a defects period we actually answer during.</p>
+          <a class="btn btn--outline" href="/contact" data-route="contact">Request a consultation
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SERVICES ============================ -->
+<section class="page" id="page-services" aria-label="Services">
+  <div class="banner">
+    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2000&q=80" alt="Contemporary architectural facade">
+    <div class="blueprint"></div>
+    <div class="wrap banner__in">
+      <p class="crumb">Home <span>/</span> <b>Services</b></p>
+      <h1>Everything a building needs, under one contract.</h1>
+      <p>Six core disciplines and nine specialist trades — combine them, or bring us in for one.</p>
+    </div>
+  </div>
+
+  <!-- Featured -->
+  <div class="sect-pad">
+    <div class="wrap">
+      <div class="head rv">
+        <p class="callout"><span class="num">01</span> — Featured services</p>
+        <h2>The six that carry a project.</h2>
+        <p>Most clients start here. Each one can stand alone, and together they make the turnkey contract.</p>
+      </div>
+
+      <div class="grid g-3 rv" style="margin-top:2.8rem;">
+        <article class="svc">
+          <figure class="svc__fig ticks">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80" alt="Cranes over a large construction site">
+            <span class="svc__tag">01 · Main contract</span>
+          </figure>
+          <div class="svc__body">
+            <h3>Building construction</h3>
+            <p>New builds from substructure to roof: excavation, foundations, frame, walls, roofing and envelope, with our own supervision on every stage.</p>
+            <span class="svc__more">Talk to us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+        <article class="svc">
+          <figure class="svc__fig ticks">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=900&q=80" alt="Modern residential house exterior">
+            <span class="svc__tag">02 · Homes</span>
+          </figure>
+          <div class="svc__body">
+            <h3>Residential construction</h3>
+            <p>Bungalows, storeyed homes, apartments and estates — built to your drawings or ours, with finishes selected to survive daily family use.</p>
+            <span class="svc__more">Talk to us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+        <article class="svc">
+          <figure class="svc__fig ticks">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="Commercial office building">
+            <span class="svc__tag">03 · Commercial</span>
+          </figure>
+          <div class="svc__body">
+            <h3>Commercial construction</h3>
+            <p>Offices, shops, warehouses and mixed-use buildings, phased so you can occupy and trade as early as the programme allows.</p>
+            <span class="svc__more">Talk to us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+        <article class="svc">
+          <figure class="svc__fig ticks">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=900&q=80" alt="Architectural structure detail">
+            <span class="svc__tag">04 · Design</span>
+          </figure>
+          <div class="svc__body">
+            <h3>Architectural design</h3>
+            <p>Concept sketches, working drawings and approval submissions — designed around your site, your budget and the way you'll actually use the space.</p>
+            <span class="svc__more">Talk to us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+        <article class="svc">
+          <figure class="svc__fig ticks">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80" alt="Engineer inspecting structural steel">
+            <span class="svc__tag">05 · Engineering</span>
+          </figure>
+          <div class="svc__body">
+            <h3>Structural engineering</h3>
+            <p>Load calculations, reinforcement detailing, formwork checks and pour supervision — the part of the building nobody sees and everybody depends on.</p>
+            <span class="svc__more">Talk to us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+        <article class="svc">
+          <figure class="svc__fig ticks">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="Team planning a project schedule">
+            <span class="svc__tag">06 · Management</span>
+          </figure>
+          <div class="svc__body">
+            <h3>Project planning &amp; management</h3>
+            <p>Programme, procurement, cost control, quality checks and weekly reporting — one manager accountable for all of it.</p>
+            <span class="svc__more">Talk to us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional -->
+  <div class="sect-pad tint" style="position:relative; overflow:hidden;">
+    <div class="blueprint blueprint--light"></div>
+    <div class="wrap" style="position:relative;">
+      <div class="grid g-2" style="align-items:end; gap:2rem;">
+        <div class="head rv">
+          <p class="callout"><span class="num">02</span> — Additional services</p>
+          <h2>The trades that finish the job.</h2>
+          <p>Available inside a main contract, or on their own for an existing building.</p>
+        </div>
+        <p class="rv" style="color:var(--text-soft); justify-self:end; max-width:38ch; font-size:.94rem;">Every specialist crew is supervised by the same project manager, so the finishes match the structure they sit on.</p>
+      </div>
+
+      <div class="grid g-3 rv" style="margin-top:2.6rem;">
+        <div class="mini"><svg viewBox="0 0 24 24"><path d="M14 7 3 18l3 3L17 10"/><path d="m14 7 3-3 4 4-3 3"/><path d="m11 10 3 3"/></svg><span><b>Renovation &amp; remodeling</b><small>Extensions, conversions, upgrades</small></span></div>
+        <div class="mini"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18M8 6v6M16 6v6M12 12v6"/></svg><span><b>Masonry &amp; finishing works</b><small>Blockwork, plaster, screed, tiling</small></span></div>
+        <div class="mini"><svg viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 9-12h-7l1-8Z"/></svg><span><b>Electrical installation</b><small>Wiring, boards, fittings, testing</small></span></div>
+        <div class="mini"><svg viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-5-7-13-7-13S5 10 5 15a7 7 0 0 0 7 7Z"/></svg><span><b>Plumbing &amp; drainage</b><small>Supply, waste, tanks, soakaways</small></span></div>
+        <div class="mini"><svg viewBox="0 0 24 24"><path d="M4 21 20 3M9 3h11v11"/><path d="M4 12v9h9"/></svg><span><b>Civil works</b><small>Access roads, culverts, retaining</small></span></div>
+        <div class="mini"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.7 4.5-7"/></svg><span><b>Landscaping &amp; external works</b><small>Paving, fencing, planting, parking</small></span></div>
+        <div class="mini"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M9 22V12h6v10"/></svg><span><b>Interior fit-outs</b><small>Partitions, ceilings, joinery, paint</small></span></div>
+        <div class="mini"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5l-9.4 9.4a2.8 2.8 0 0 1-4-4l8.4-10.4Z"/><circle cx="18" cy="6" r="3"/></svg><span><b>Maintenance services</b><small>Planned upkeep and repairs</small></span></div>
+        <div class="mini"><svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V9l8-6 8 6v11"/><path d="M9 20v-5h6v5"/></svg><span><b>Design &amp; build solutions</b><small>One contract, concept to keys</small></span></div>
+      </div>
+
+      <div class="band rv" style="margin-top:3.2rem;">
+        <div class="band__row">
+          <div>
+            <h2>Not sure which of these you need?</h2>
+            <p>Send us your drawings, your site photos, or just the idea. We'll tell you what the work actually involves.</p>
+          </div>
+          <div style="display:flex; gap:.8rem; flex-wrap:wrap;">
+            <a class="btn btn--white" href="tel:0414580857">Call the office</a>
+            <a class="btn btn--ghost" href="mailto:jsgconstruction.ug@gmail.com">Email us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TESTIMONIALS ============================ -->
+<section class="page" id="page-testimonials" aria-label="Testimonials">
+  <div class="banner">
+    <img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=2000&q=80" alt="Completed architectural structure">
+    <div class="blueprint"></div>
+    <div class="wrap banner__in">
+      <p class="crumb">Home <span>/</span> <b>Testimonials</b></p>
+      <h1>What clients say once the scaffolding is down.</h1>
+      <p>Homeowners, developers, businesses and institutions we've built for across Uganda.</p>
+    </div>
+  </div>
+
+  <div class="sect-pad">
+    <div class="wrap">
+      <div class="grid g-2" style="align-items:end; gap:2rem;">
+        <div class="head rv">
+          <p class="callout"><span class="num">01</span> — Client feedback</p>
+          <h2>Reviews from four kinds of client.</h2>
+        </div>
+        <div class="rv" style="justify-self:end; text-align:right;">
+          <b style="font-family:var(--display); font-size:2.4rem; letter-spacing:-.03em; display:block; line-height:1;">4.9<span style="color:var(--blue)">/5</span></b>
+          <span style="font-family:var(--mono); font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--text-soft);">Average client rating</span>
+        </div>
+      </div>
+
+      <div class="grid g-3 rv" style="margin-top:2.8rem;">
+        <article class="quote">
+          <span class="quote__mark">&rdquo;</span>
+          <div class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg></div>
+          <span class="quote__proj">Residential · 4-bedroom home</span>
+          <p>They built our home in Kira in eleven months and the only thing that changed from the first quotation was the tiles, because we changed them. The site was swept every Friday. That told me everything.</p>
+          <div class="quote__who"><span class="avatar">SN</span><span><b>Sarah Nakato</b><span>Homeowner, Kira</span></span></div>
+        </article>
+
+        <article class="quote">
+          <span class="quote__mark">&rdquo;</span>
+          <div class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg></div>
+          <span class="quote__proj">Commercial · Retail arcade</span>
+          <p>We needed the ground floor trading before the upper floors were finished. J.S.G phased the works so our tenants opened three months early. The rent covered the rest of the build.</p>
+          <div class="quote__who"><span class="avatar">DM</span><span><b>David Mugisha</b><span>Managing Director, Kampala</span></span></div>
+        </article>
+
+        <article class="quote">
+          <span class="quote__mark">&rdquo;</span>
+          <div class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg></div>
+          <span class="quote__proj">Developer · 24-unit apartments</span>
+          <p>Their valuations are itemised to the last bag of cement. In this industry that is rarer than it should be. We've now given them our third block.</p>
+          <div class="quote__who"><span class="avatar">PS</span><span><b>Priya Shah</b><span>Property Developer, Naguru</span></span></div>
+        </article>
+
+        <article class="quote">
+          <span class="quote__mark">&rdquo;</span>
+          <div class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg></div>
+          <span class="quote__proj">Institution · School block</span>
+          <p>They worked through a term with 600 children on the same compound and we never had a safety incident. The hoarding went up before the first block was delivered.</p>
+          <div class="quote__who"><span class="avatar">RO</span><span><b>Rev. Robert Okello</b><span>School Director, Mukono</span></span></div>
+        </article>
+
+        <article class="quote">
+          <span class="quote__mark">&rdquo;</span>
+          <div class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg></div>
+          <span class="quote__proj">Renovation · Office fit-out</span>
+          <p>An old building with bad drawings and worse wiring. They surveyed it properly first, then priced it. No variations after that — which is why I'm writing this.</p>
+          <div class="quote__who"><span class="avatar">GN</span><span><b>Grace Nabirye</b><span>Operations Manager, Nakasero</span></span></div>
+        </article>
+
+        <article class="quote">
+          <span class="quote__mark">&rdquo;</span>
+          <div class="stars" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1L12 2Z"/></svg></div>
+          <span class="quote__proj">Design &amp; build · Warehouse</span>
+          <p>We came with a sketch on paper. They took it through design, approvals and construction without us ever having to chase a consultant. That is the whole value.</p>
+          <div class="quote__who"><span class="avatar">JK</span><span><b>James Kiggundu</b><span>Logistics Director, Namanve</span></span></div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="sect-pad dark" style="position:relative; overflow:hidden; padding-block:clamp(3rem,6vw,5rem);">
+    <div class="blueprint"></div>
+    <div class="wrap rv" style="position:relative; text-align:center;">
+      <h2 style="font-size:clamp(1.6rem,3vw,2.3rem); max-width:24ch; margin-inline:auto;">Your project could be the next review on this page.</h2>
+      <div style="display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; margin-top:1.8rem;">
+        <a class="btn btn--primary" href="/contact" data-route="contact">Start the conversation
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="/faqs" data-route="faqs">Read the FAQs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQS ============================ -->
+<section class="page" id="page-faqs" aria-label="Frequently asked questions">
+  <div class="banner">
+    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2000&q=80" alt="Engineers reviewing project documents on site">
+    <div class="blueprint"></div>
+    <div class="wrap banner__in">
+      <p class="crumb">Home <span>/</span> <b>FAQs</b></p>
+      <h1>The questions clients ask before signing.</h1>
+      <p>Straight answers on timelines, budgets, permits and quality. If yours isn't here, call us.</p>
+    </div>
+  </div>
+
+  <div class="sect-pad">
+    <div class="wrap split" style="align-items:start;">
+      <div class="rv-l" style="position:sticky; top:110px;">
+        <p class="callout"><span class="num">01</span> — Answers</p>
+        <h2 style="font-size:clamp(1.8rem,3.2vw,2.5rem);">Ask us anything. Preferably before the contract.</h2>
+        <p style="margin-top:1rem; color:var(--text-soft);">These are the seven we hear most. A phone call answers the eighth.</p>
+        <div class="card" style="margin-top:1.8rem;">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+          <h3>Still unsure?</h3>
+          <p style="margin-bottom:1.1rem;">The office answers during business hours, and someone will call you back the same day if we miss you.</p>
+          <a class="btn btn--outline" href="tel:0414580857">Call 0414 580857</a>
+        </div>
+      </div>
+
+      <div class="rv-r">
+        <div class="faq">
+          <button class="faq__q" aria-expanded="false"><span class="n">Q1</span><span class="t">How long does construction take?</span><span class="faq__sign"></span></button>
+          <div class="faq__a"><div>It depends on scale and finishes, but as a guide: a standard three-bedroom bungalow runs six to nine months, a storeyed home nine to fourteen, and a commercial block twelve to twenty-four. We give you a dated programme before work starts, and a weekly report showing where we are against it.</div></div>
+        </div>
+        <div class="faq">
+          <button class="faq__q" aria-expanded="false"><span class="n">Q2</span><span class="t">Do you offer design-build services?</span><span class="faq__sign"></span></button>
+          <div class="faq__a"><div>Yes — it's how most of our clients work with us. Architectural design, structural engineering and construction sit in one contract, so there is no gap between the drawing and the build, and no argument about whose responsibility a problem is.</div></div>
+        </div>
+        <div class="faq">
+          <button class="faq__q" aria-expanded="false"><span class="n">Q3</span><span class="t">Can you work within my budget?</span><span class="faq__sign"></span></button>
+          <div class="faq__a"><div>Tell us the budget at the first meeting and we'll tell you honestly what it builds. Where it's tight, we design to the figure — adjusting scope, specification or phasing — rather than starting a project that stalls at roof level. Every quotation is measured, itemised and explained line by line.</div></div>
+        </div>
+        <div class="faq">
+          <button class="faq__q" aria-expanded="false"><span class="n">Q4</span><span class="t">Do you handle permits and approvals?</span><span class="faq__sign"></span></button>
+          <div class="faq__a"><div>We prepare and submit the drawings and documents required by the local authority and follow the submission through to approval. You stay informed at each stage; we handle the queues.</div></div>
+        </div>
+        <div class="faq">
+          <button class="faq__q" aria-expanded="false"><span class="n">Q5</span><span class="t">Which areas do you serve?</span><span class="faq__sign"></span></button>
+          <div class="faq__a"><div>Our office is on Yusuf Lule Road in Kampala and we work throughout Uganda — Wakiso, Mukono, Entebbe, Jinja, Mbarara, Gulu and beyond. For sites outside the central region we mobilise a resident site team rather than commuting.</div></div>
+        </div>
+        <div class="faq">
+          <button class="faq__q" aria-expanded="false"><span class="n">Q6</span><span class="t">Do you offer renovations?</span><span class="faq__sign"></span></button>
+          <div class="faq__a"><div>Yes. Extensions, remodelling, fit-outs, roof replacement, and structural repair to existing buildings. Renovation work always begins with a survey of what is actually there — old drawings are rarely accurate — and the price follows the survey, not the guess.</div></div>
+        </div>
+        <div class="faq">
+          <button class="faq__q" aria-expanded="false"><span class="n">Q7</span><span class="t">How do you ensure project quality?</span><span class="faq__sign"></span></button>
+          <div class="faq__a"><div>Three ways. Materials are tested and sourced from approved suppliers. Work is inspected at hold points — setting out, reinforcement, before every pour, before closing anything up. And one named project manager signs off each stage, with photographs, before the next one starts.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="page" id="page-contact" aria-label="Contact">
+  <div class="banner">
+    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80" alt="Modern office building in the city">
+    <div class="blueprint"></div>
+    <div class="wrap banner__in">
+      <p class="crumb">Home <span>/</span> <b>Contact</b></p>
+      <h1>Call the office. Ask for the estimator.</h1>
+      <p>Yusuf Lule Road, Kampala. Open Monday to Saturday, and on site most Sundays.</p>
+    </div>
+  </div>
+
+  <div class="sect-pad dark" style="position:relative; overflow:hidden;">
+    <div class="blueprint"></div>
+    <div class="wrap" style="position:relative;">
+      <div class="head head--wide rv">
+        <p class="callout"><span class="num">01</span> — Reach us</p>
+        <h2>Two buttons, no forms.</h2>
+        <p>We'd rather hear your voice than read a form. Both go straight to the office.</p>
+      </div>
+
+      <div class="grid g-2 rv" style="margin-top:2.4rem;">
+        <a class="contact-card" href="tel:0414580857">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+          <h3>Call the office</h3>
+          <p style="font-family:var(--mono); font-size:1.3rem; color:#fff; letter-spacing:.02em;">0414 580857</p>
+          <p>Fastest way to reach an estimator during business hours.</p>
+        </a>
+        <a class="contact-card" href="mailto:jsgconstruction.ug@gmail.com">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div>
+          <h3>Email the team</h3>
+          <p style="font-family:var(--mono); font-size:1rem; color:#fff; word-break:break-all;">jsgconstruction.ug@gmail.com</p>
+          <p>Send drawings, site photos or a scope — we reply within one working day.</p>
+        </a>
+      </div>
+
+      <div class="grid g-3 rv" style="margin-top:var(--gap); align-items:stretch;">
+        <div class="contact-card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3>Office location</h3>
+          <p>Yusuf Lule Road<br>Kampala, Uganda</p>
+          <p style="font-family:var(--mono); font-size:.7rem; letter-spacing:.12em; color:#7FA0BA; margin-top:.4rem;">VISITS BY APPOINTMENT</p>
+        </div>
+        <div class="contact-card">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+          <h3>Business hours</h3>
+          <div style="margin-top:.4rem;">
+            <div class="hours"><b>Mon — Fri</b><span>8:00 — 18:00</span></div>
+            <div class="hours"><b>Saturday</b><span>9:00 — 14:00</span></div>
+            <div class="hours"><b>Sunday</b><span>Site visits only</span></div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/></svg></div>
+          <h3>Follow the work</h3>
+          <p style="margin-bottom:1rem;">Site progress, completed projects and open positions.</p>
+          <div class="social">
+            <a href="#" aria-label="Facebook (link coming soon)"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg></a>
+            <a href="#" aria-label="Instagram (link coming soon)"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+            <a href="#" aria-label="LinkedIn (link coming soon)"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="X (link coming soon)"><svg viewBox="0 0 24 24"><path d="m3 3 18 18M21 3 3 21"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="map rv ticks" style="margin-top:var(--gap);">
+        <div>
+          <div class="map__pin"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <b>J.S.G Construction Company Ltd</b>
+          <span>YUSUF LULE ROAD · KAMPALA · UGANDA</span>
+          <p style="color:#7FA0BA; font-size:.85rem; margin-top:.8rem;">Interactive map to be embedded here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div>
+        <a href="/" class="logo" data-route="home">
+          <span class="logo__mark">JSG</span>
+          <span class="logo__txt">
+            <span class="logo__name">J.S.G Construction</span>
+            <span class="logo__sub">Company Ltd</span>
+          </span>
+        </a>
+        <p class="foot__about">Construction, civil engineering and design &amp; build across Uganda since 2007. Concept to completion, under one accountable team.</p>
+        <p class="foot__meta">
+          REG. UGANDA · EST. 2007<br>
+          YUSUF LULE ROAD, KAMPALA
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="/" data-route="home">Home</a></li>
+          <li><a href="/about" data-route="about">About</a></li>
+          <li><a href="/services" data-route="services">Services</a></li>
+          <li><a href="/testimonials" data-route="testimonials">Testimonials</a></li>
+          <li><a href="/faqs" data-route="faqs">FAQs</a></li>
+          <li><a href="/contact" data-route="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services" data-route="services">Building construction</a></li>
+          <li><a href="/services" data-route="services">Residential construction</a></li>
+          <li><a href="/services" data-route="services">Commercial construction</a></li>
+          <li><a href="/services" data-route="services">Architectural design</a></li>
+          <li><a href="/services" data-route="services">Structural engineering</a></li>
+          <li><a href="/services" data-route="services">Project management</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:0414580857">0414 580857</a></li>
+          <li><a href="mailto:jsgconstruction.ug@gmail.com">jsgconstruction.ug@gmail.com</a></li>
+          <li style="margin-top:1rem; color:#8FA6BA; font-size:.9rem;">Yusuf Lule Road<br>Kampala, Uganda</li>
+        </ul>
+        <div class="social" style="margin-top:1.2rem;">
+          <a href="#" aria-label="Facebook (link coming soon)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg></a>
+          <a href="#" aria-label="Instagram (link coming soon)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+          <a href="#" aria-label="LinkedIn (link coming soon)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot__bar">
+      <span>© <b id="year">2026</b> J.S.G CONSTRUCTION COMPANY LTD · ALL RIGHTS RESERVED</span>
+      <span>BUILDING UGANDA SINCE 2007</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------------------------------------------------------
+     1. ROUTER — one section visible at a time, History API
+     --------------------------------------------------------- */
+  var ROUTES = ['home','about','services','testimonials','faqs','contact'];
+  var TITLES = {
+    home:'J.S.G Construction Company Ltd — Building Uganda Since 2007',
+    about:'About — J.S.G Construction Company Ltd',
+    services:'Services — J.S.G Construction Company Ltd',
+    testimonials:'Testimonials — J.S.G Construction Company Ltd',
+    faqs:'FAQs — J.S.G Construction Company Ltd',
+    contact:'Contact — J.S.G Construction Company Ltd'
+  };
+
+  var pages  = {};
+  ROUTES.forEach(function (r) { pages[r] = document.getElementById('page-' + r); });
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('[data-route]'));
+
+  function routeFromPath() {
+    var seg = (location.pathname || '/').split('/').filter(Boolean).pop();
+    if (location.hash) seg = location.hash.replace('#','').replace('/','');
+    if (!seg) return 'home';
+    return ROUTES.indexOf(seg) > -1 ? seg : 'home';   // graceful fallback, incl. file:// use
+  }
+
+  function show(route, push, scroll) {
+    if (ROUTES.indexOf(route) === -1) route = 'home';
+
+    ROUTES.forEach(function (r) {
+      if (pages[r]) pages[r].classList.toggle('is-current', r === route);
+    });
+
+    navLinks.forEach(function (a) {
+      var on = a.getAttribute('data-route') === route;
+      if (a.classList.contains('nav__link') || a.parentNode.id === 'drawer') {
+        a.classList.toggle('is-active', on);
+        if (on) { a.setAttribute('aria-current','page'); } else { a.removeAttribute('aria-current'); }
+      }
+    });
+
+    document.title = TITLES[route] || TITLES.home;
+
+    if (push) {
+      try {
+        history.pushState({ route: route }, '', route === 'home' ? '/' : '/' + route);
+      } catch (err) {
+        location.hash = route === 'home' ? '' : route;   // file:// or blocked pushState
+      }
+    }
+
+    if (scroll !== false) window.scrollTo(0, 0);
+
+    closeDrawer();
+    resetReveals(pages[route]);
+    onScroll();
+  }
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('[data-route]') : null;
+    if (!a) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+    e.preventDefault();
+    show(a.getAttribute('data-route'), true, true);
+  });
+
+  window.addEventListener('popstate', function (e) {
+    var r = (e.state && e.state.route) ? e.state.route : routeFromPath();
+    show(r, false, true);
+  });
+
+  /* ---------------------------------------------------------
+     2. NAV — sticky glass + mobile drawer
+     --------------------------------------------------------- */
+  var nav    = document.getElementById('nav');
+  var burger = document.getElementById('burger');
+  var drawer = document.getElementById('drawer');
+  var scrim  = document.getElementById('scrim');
+
+  function onScroll() {
+    nav.classList.toggle('is-stuck', window.scrollY > 24);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  function openDrawer() {
+    drawer.classList.add('is-open');
+    scrim.classList.add('is-open');
+    burger.classList.add('is-open');
+    burger.setAttribute('aria-expanded','true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    drawer.classList.remove('is-open');
+    scrim.classList.remove('is-open');
+    burger.classList.remove('is-open');
+    burger.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  }
+  burger.addEventListener('click', function () {
+    drawer.classList.contains('is-open') ? closeDrawer() : openDrawer();
+  });
+  scrim.addEventListener('click', closeDrawer);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDrawer(); });
+
+  /* ---------------------------------------------------------
+     3. SCROLL REVEAL + counters + process rules
+     --------------------------------------------------------- */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function countUp(el) {
+    var to = parseInt(el.getAttribute('data-to'), 10) || 0;
+    if (reduce) { el.textContent = to; return; }
+    var start = null, dur = 1600;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(to * eased);
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  var io = ('IntersectionObserver' in window) ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      var el = en.target;
+      el.classList.add('on');
+      el.querySelectorAll && Array.prototype.forEach.call(el.querySelectorAll('.count'), function (c) {
+        if (!c.dataset.done) { c.dataset.done = '1'; countUp(c); }
+      });
+      io.unobserve(el);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }) : null;
+
+  function observe(scope) {
+    var els = (scope || document).querySelectorAll('.rv, .rv-l, .rv-r, .js-proc');
+    Array.prototype.forEach.call(els, function (el) {
+      if (io) { io.observe(el); } else { el.classList.add('on'); }
+    });
+  }
+
+  function resetReveals(scope) {
+    if (!scope) return;
+    var els = scope.querySelectorAll('.rv, .rv-l, .rv-r, .js-proc');
+    Array.prototype.forEach.call(els, function (el, i) {
+      var top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight * 0.92) {
+        setTimeout(function () {
+          el.classList.add('on');
+          Array.prototype.forEach.call(el.querySelectorAll('.count'), function (c) {
+            if (!c.dataset.done) { c.dataset.done = '1'; countUp(c); }
+          });
+        }, Math.min(i * 70, 350));
+      } else if (io) {
+        io.observe(el);
+      }
+    });
+  }
+  observe(document);
+
+  /* ---------------------------------------------------------
+     4. FAQ accordion
+     --------------------------------------------------------- */
+  Array.prototype.forEach.call(document.querySelectorAll('.faq__q'), function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.parentNode;
+      var panel = item.querySelector('.faq__a');
+      var open = item.classList.contains('is-open');
+
+      Array.prototype.forEach.call(document.querySelectorAll('.faq.is-open'), function (other) {
+        if (other === item) return;
+        other.classList.remove('is-open');
+        other.querySelector('.faq__a').style.height = '0px';
+        other.querySelector('.faq__q').setAttribute('aria-expanded','false');
+      });
+
+      if (open) {
+        panel.style.height = '0px';
+        item.classList.remove('is-open');
+        btn.setAttribute('aria-expanded','false');
+      } else {
+        item.classList.add('is-open');
+        btn.setAttribute('aria-expanded','true');
+        panel.style.height = panel.firstElementChild.offsetHeight + 'px';
+      }
+    });
+  });
+  window.addEventListener('resize', function () {
+    Array.prototype.forEach.call(document.querySelectorAll('.faq.is-open .faq__a'), function (p) {
+      p.style.height = p.firstElementChild.offsetHeight + 'px';
+    });
+  });
+
+  /* ---------------------------------------------------------
+     5. Button ripple
+     --------------------------------------------------------- */
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.btn') : null;
+    if (!btn || reduce) return;
+    var r = btn.getBoundingClientRect();
+    var s = Math.max(r.width, r.height);
+    var span = document.createElement('span');
+    span.className = 'ripple';
+    span.style.width = span.style.height = s + 'px';
+    span.style.left = (e.clientX - r.left - s / 2) + 'px';
+    span.style.top  = (e.clientY - r.top  - s / 2) + 'px';
+    btn.appendChild(span);
+    setTimeout(function () { span.remove(); }, 620);
+  });
+
+  /* ---------------------------------------------------------
+     6. Subtle hero parallax
+     --------------------------------------------------------- */
+  if (!reduce) {
+    var media = document.querySelector('.hero__media');
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (ticking || !media) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        var y = Math.min(window.scrollY, 900);
+        media.style.transform = 'translate3d(0,' + (y * 0.16) + 'px,0)';
+        ticking = false;
+      });
+    }, { passive: true });
+  }
+
+  /* ---------------------------------------------------------
+     7. Boot
+     --------------------------------------------------------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+  show(routeFromPath(), false, false);
+  onScroll();
+})();
+</script>
+</body>
+</html>
