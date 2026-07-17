@@ -673,6 +673,10 @@ ul{ margin:0; padding:0; list-style:none; }
 .rv-r{ opacity:0; transform:translateX(26px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
 .rv-r.on{ opacity:1; transform:none; }
 
+/* The FAQ intro holds its place while the answers scroll past it. Only
+   sensible while the split is two columns — see the 900px breakpoint. */
+.faq__side{ position:sticky; top:110px; }
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
@@ -686,6 +690,13 @@ ul{ margin:0; padding:0; list-style:none; }
   .burger{ display:flex; }
   .g-3{ grid-template-columns:repeat(2,1fr); }
   .split{ grid-template-columns:1fr; }
+  /* Once the split stacks, a sticky intro would sit still while the answers
+     scroll underneath it — the two columns are now in one lane. */
+  .faq__side{ position:static; top:auto; }
+  /* Sideways reveals push past the right edge in a single lane and give the
+     page a horizontal scrollbar. Reveal upward instead. */
+  .rv-l,.rv-r{ transform:translateY(20px); }
+  .rv-l.on,.rv-r.on{ transform:none; }
   .stats{ grid-template-columns:repeat(2,1fr); }
   .hero__strip{ grid-template-columns:repeat(2,1fr); row-gap:.5rem; }
   .hero__coord{ display:none; }
@@ -803,12 +814,16 @@ ul{ margin:0; padding:0; list-style:none; }
   <div class="sect-pad" style="position:relative; overflow:hidden;">
     <div class="blueprint blueprint--light"></div>
     <div class="wrap" style="position:relative;">
-      <div class="grid g-2" style="align-items:end; gap:2rem;">
-        <div class="head rv">
+      <div class="split" style="align-items:center;">
+        <div class="rv-l">
           <p class="callout"><span class="num">01</span> — Who we are</p>
           <h2>One contractor, accountable from concept to completion.</h2>
+          <p style="color:var(--text-soft); margin-top:1.1rem;">J.S.G Construction Company Ltd combines engineering discipline with skilled workmanship and honest project management. Every project begins with a strong partnership and ends with a building that earns its keep.</p>
         </div>
-        <p class="rv" style="color:var(--text-soft);">J.S.G Construction Company Ltd combines engineering discipline with skilled workmanship and honest project management. Every project begins with a strong partnership and ends with a building that earns its keep.</p>
+        <div class="split__fig rv-r">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80" alt="Engineers reviewing project drawings on a construction site">
+          <div class="split__badge"><b>18 yrs</b><span>On Ugandan sites</span></div>
+        </div>
       </div>
 
       <div class="grid g-4 rv" style="margin-top:3rem;">
@@ -1357,7 +1372,7 @@ ul{ margin:0; padding:0; list-style:none; }
 
   <div class="sect-pad">
     <div class="wrap split" style="align-items:start;">
-      <div class="rv-l" style="position:sticky; top:110px;">
+      <div class="rv-l faq__side">
         <p class="callout"><span class="num">01</span> — Answers</p>
         <h2 style="font-size:clamp(1.8rem,3.2vw,2.5rem);">Ask us anything. Preferably before the contract.</h2>
         <p style="margin-top:1rem; color:var(--text-soft);">These are the seven we hear most. A phone call answers the eighth.</p>
